@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -24,10 +25,8 @@ public class Cricbuzz {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("m.cricbuzz.com");
 	    //driver.findElement(MobileBy.className("android.widget.TextView")).click();
-	   driver.findElementByAndroidUIAutomator("text(\"Menu\")").click();
-        driver.findElementByAndroidUIAutomator("text(\"HOME\")").click();
-	    WebElement Link = driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"England clinch series 1-0\"));");
-	    Link.click();
-	
+		driver.findElement(By.xpath("//span[@class='ui-btn-text']")).click();
+		driver.findElement(By.xpath("//a[@title='Cricbuzz Home']")).click();
+		driver.findElement(By.xpath("//span[contains(text(),'After a solid summer, England')]")).click();
 	}
 }
