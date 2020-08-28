@@ -24,10 +24,10 @@ public class Cricbuzz {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("m.cricbuzz.com");
 	    //driver.findElement(MobileBy.className("android.widget.TextView")).click();
-	   /* driver.findElementByAndroidUIAutomator("text(\"Menu\")").click();
+	   driver.findElementByAndroidUIAutomator("text(\"Menu\")").click();
         driver.findElementByAndroidUIAutomator("text(\"HOME\")").click();
 	    WebElement Link = driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"England clinch series 1-0\"));");
-	    Link.click();*/
+	    Link.click();
 	
 	}
 }
